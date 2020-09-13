@@ -9,12 +9,13 @@ RUN npm run build:prod
 
 FROM python:3.9-rc-alpine
 
-COPY --from=build /pluto-admin/dist /pluto-admin/dist
+COPY --from=build /pluto-admin/dist /app
+COPY docker-entrypoint.sh /usr/local
+RUN chmod +x /usr/local/docker-entrypoint.sh
 
-WORKDIR /pluto-admin/dist
+WORKDIR /app
 
-ENV VUE_APP_BASE_API="http://localhost:8082/"
+ENV VUE_APP_BASE_API="http://localhost:8081/"
+ENV PORT=8082
 
-RUN sed -i 's/'$VUE_APP_BASE_API'/VUE_APP_BASE_API/g' /pluto-admin/dist/static/js/app.*.js
-
-ENTRYPOINT python3 -m http.server 8012
+ENTRYPOINT ["/usr/local/docker-entrypoint.sh"]
