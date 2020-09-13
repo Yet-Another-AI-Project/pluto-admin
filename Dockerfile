@@ -15,4 +15,4 @@ COPY --from=build /pluto-admin/dist /pluto-admin/dist
 
 WORKDIR /pluto-admin/dist
 
-ENTRYPOINT python3 -m http.server 8011
+ENTRYPOINT python3 -m http.server 8012
