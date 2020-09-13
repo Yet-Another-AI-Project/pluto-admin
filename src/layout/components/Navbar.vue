@@ -30,7 +30,7 @@
           <router-link to="/">
             <el-dropdown-item>Dashboard</el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://github.com/leeif/pluto">
+          <a target="_blank" href="https://github.com/mushare/pluto">
             <el-dropdown-item>Github</el-dropdown-item>
           </a>
           <el-dropdown-item divided>

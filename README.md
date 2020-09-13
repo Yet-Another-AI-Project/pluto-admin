@@ -18,26 +18,26 @@ Snapshots
 
 login page
 
-![login page](https://github.com/leeif/pluto-admin/blob/master/snapshots/login.png)
+![login page](https://github.com/mushare/pluto-admin/blob/master/snapshots/login.png)
 
 dashboard
 
-![dashboard page](https://github.com/leeif/pluto-admin/blob/master/snapshots/dashboard.png)
+![dashboard page](https://github.com/mushare/pluto-admin/blob/master/snapshots/dashboard.png)
 
 rbac page
 
-![rbac page](https://github.com/leeif/pluto-admin/blob/master/snapshots/rbac.png)
+![rbac page](https://github.com/mushare/pluto-admin/blob/master/snapshots/rbac.png)
 
 user management
 
-![user_management page](https://github.com/leeif/pluto-admin/blob/master/snapshots/user_managment.png)
+![user_management page](https://github.com/mushare/pluto-admin/blob/master/snapshots/user_managment.png)
 
 Development
 ===
 
 ```
 # clone the project
-git clone https://github.com/leeif/pluto-admin.git
+git clone https://github.com/mushare/pluto-admin.git
 
 cd pluto-admin
 
@@ -51,7 +51,7 @@ npm run dev
 VUE_APP_BASE_API=https://xxxx npm run staging/production
 ```
 
-Change the proxy target to your own domain of the pluto server  in [vue.config.js](https://github.com/leeif/pluto-admin/blob/master/vue.config.js#L42).
+Change the proxy target to your own domain of the pluto server  in [vue.config.js](https://github.com/mushare/pluto-admin/blob/master/vue.config.js#L42).
 
 Build
 ```
