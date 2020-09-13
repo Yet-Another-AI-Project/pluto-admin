@@ -9,11 +9,9 @@ RUN npm run build:prod
 
 FROM python:3.9-rc-alpine
 
-COPY --from=build /pluto-admin/dist /app
+COPY --from=build /pluto-admin/dist /pluto-admin/dist
 COPY docker-entrypoint.sh /usr/local
 RUN chmod +x /usr/local/docker-entrypoint.sh
-
-WORKDIR /app
 
 ENV VUE_APP_BASE_API="http://localhost:8081/"
 ENV PORT=8082
