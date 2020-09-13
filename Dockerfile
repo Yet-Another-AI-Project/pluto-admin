@@ -7,7 +7,7 @@ WORKDIR /pluto-admin
 RUN rm -rf node_modules/ && rm -rf package-lock.json && npm install
 RUN npm run build:prod
 
-FROM python:3.9-rc-alpine
+FROM python:3.9
 
 COPY --from=build /pluto-admin/dist /pluto-admin/dist
 COPY docker-entrypoint.sh /usr/local
