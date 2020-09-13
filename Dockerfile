@@ -9,7 +9,7 @@ RUN npm run build:prod
 
 FROM python:3.9-rc
 
-COPY --from=build /pluto-admin/dist /pluto-admin/dist
+COPY --from=build /pluto-admin/dist /app
 COPY docker-entrypoint.sh /usr/local
 RUN chmod +x /usr/local/docker-entrypoint.sh
 
