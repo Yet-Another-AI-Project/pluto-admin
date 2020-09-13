@@ -1,8 +1,8 @@
 docker-build:
-	docker build --build-arg VUE_APP_BASE_API=$(VUE_APP_BASE_API) -t mushare/pluto-admin:$(VERSION) .
+	docker build -t mushare/pluto-admin:$(VERSION) .
 
 docker-stg-build:
-	docker build --build-arg VUE_APP_BASE_API=$(VUE_APP_BASE_API) -t mushare/pluto-admin:staging .
+	docker build -t mushare/pluto-admin:staging .
 
 docker-push:
 	docker push mushare/pluto-admin:$(VERSION)
