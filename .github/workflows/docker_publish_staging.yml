@@ -16,6 +16,3 @@ jobs:
 
       - name: Build image
         run: make ci-build-staging
-      
-      - name: Deploy to staging
-        run: curl ${{ secrets.STAGING_DEPLOY_WEBHOOK }}
