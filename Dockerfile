@@ -4,6 +4,8 @@ ADD . /pluto-admin
 
 WORKDIR /pluto-admin
 
+RUN git config --global http.sslverify "false"
+RUN git config --global url."https://".insteadOf "git://"
 RUN rm -rf node_modules/ && rm -rf package-lock.json && npm install
 RUN npm run build:prod
 
